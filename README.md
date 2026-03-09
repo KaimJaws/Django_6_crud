@@ -99,7 +99,7 @@ bases de datos representa una relación 1:N (Uno a Muchos).
 Significa que muchas personas pueden estar asociadas a un mismo producto, pero
 cada persona solo puede tener un producto asignado.
 
-1. `Product (El primer argumento)`
+1. `Product` (El primer argumento)
 
 Es el modelo con el que te estás relacionando. Le dice a Django: "Este campo
 guardará una referencia a la tabla de Productos".
@@ -113,7 +113,7 @@ base de datos.
 product pasará a estar vacío (`NULL`). Es ideal para no perder registros de
 personas si un producto deja de existir.
 
-3. `null=True y blank=True`
+3. `null=True` y `blank=True`
 
 Ambos permiten que el campo sea opcional, pero en niveles distintos:
 
