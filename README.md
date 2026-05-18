@@ -72,13 +72,13 @@ Cuando a este script le añades el apellido de "Interactivo", significa que el c
 
 Un comando de administración interactivo se caracteriza técnicamente por implementar los siguientes comportamientos:
 
-    - Pausas de Ejecución (Captura de Inputs): Detiene el flujo del script utilizando funciones como `input()` para solicitar parámetros dinámicos directamente en la consola.
+- Pausas de Ejecución (Captura de Inputs): Detiene el flujo del script utilizando funciones como `input()` para solicitar parámetros dinámicos directamente en la consola.
 
-    - Validación en Tiempo Real: Analiza las respuestas introducidas por el usuario en la terminal y, si rompen alguna regla de negocio, interrumpe el proceso de forma segura devolviendo excepciones controladas (`CommandError`) sin llegar a tocar la base de datos.
+- Validación en Tiempo Real: Analiza las respuestas introducidas por el usuario en la terminal y, si rompen alguna regla de negocio, interrumpe el proceso de forma segura devolviendo excepciones controladas (`CommandError`) sin llegar a tocar la base de datos.
 
-    - Mecanismos de Confirmación (Gatekeeping): Antes de ejecutar operaciones críticas, destructivas o masivas (como un `.update()` o un `.delete()`), muestra advertencias detalladas del impacto y exige una confirmación explícita (ej. `[s/n]`) para proceder o abortar la operación.
+- Mecanismos de Confirmación (Gatekeeping): Antes de ejecutar operaciones críticas, destructivas o masivas (como un `.update()` o un `.delete()`), muestra advertencias detalladas del impacto y exige una confirmación explícita (ej. `[s/n]`) para proceder o abortar la operación.
 
-    - Salidas Formateadas con Estilo: Utiliza canales estandarizados como `self.stdout` y `self.stderr` junto con buffers de estilizado (`self.style.SUCCESS`, `self.style.ERROR`) para pintar alertas de colores en la terminal según el resultado de la interacción.
+- Salidas Formateadas con Estilo: Utiliza canales estandarizados como `self.stdout` y `self.stderr` junto con buffers de estilizado (`self.style.SUCCESS`, `self.style.ERROR`) para pintar alertas de colores en la terminal según el resultado de la interacción.
 
 Esta Prueba de Concepto demuestra la implementación en Django 6 de un comando de consola interactivo y seguro. Su comportamiento es el equivalente funcional a los Seeders interactivos de frameworks como Laravel.
 
